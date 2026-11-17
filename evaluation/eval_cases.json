@@ -1,0 +1,27 @@
+[
+  {
+    "id": "eval_exact_sku",
+    "utterance": "What is the warranty for SKU-104?",
+    "expected_sku": "SKU-104",
+    "expected_escalate": false
+  },
+  {
+    "id": "eval_phonetic_sku",
+    "utterance": "Check status on S K U dash one oh four please",
+    "expected_sku": "SKU-104",
+    "expected_escalate": false
+  },
+  {
+    "id": "eval_absent_product",
+    "utterance": "Do you have replacement parts for ZYX-999?",
+    "expected_sku": null,
+    "expected_escalate": true
+  },
+  {
+    "id": "eval_webhook_timeout",
+    "utterance": "Give me live inventory for SKU-104",
+    "simulate_latency_ms": 600,
+    "expected_timed_out": true,
+    "expected_escalate": true
+  }
+]
